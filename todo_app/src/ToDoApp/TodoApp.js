@@ -68,8 +68,20 @@ export default function TodoApp() {
     return (
         <div className="container">  
         <h1>Todo App</h1>
-            <FormInput setTodoName={setTodoName} todoName={todoName} todoList={filterTodo} setTodoList={setFilterTodo} status={status} setStatus={setStatus}/>
-            <TodoList todoList={filterTodo} setTodoList={setTodoList} filterTodo={filterTodo} deleteTodo ={deleteTodo} setNewTitle = {setNewTitle} handleNewTitle = {handleNewTitle}/>
+            <FormInput setTodoName={setTodoName} 
+            todoName={todoName} 
+            todoList={filterTodo} 
+            setTodoList={setFilterTodo} 
+            status={status} 
+            setStatus={setStatus}/>
+
+            <TodoList todoList={filterTodo} 
+            setTodoList={setTodoList} 
+            filterTodo={filterTodo} 
+            deleteTodo ={deleteTodo} 
+            setNewTitle = {setNewTitle} 
+            handleNewTitle = {handleNewTitle}/>
+            
             <TodoFooter todoList={filterTodo}/>
         </div>
     )
