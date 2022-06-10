@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap");
+
+* {
+    font-family: "Raleway";
+  }
+  
+html,
+body,
+#root {
+  padding: 0px;
+  margin: 0px;
+  background-color: #dedede;
+}
+
+
+
+.App{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    border : 1px solid red;
+    width: 550px;
+    height: 50%;
+    margin-top: 100px;
+    background-color: white;
+    border: 1px solid #ececec;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    border-radius: 12px;
+}
+.container > h1{
+    margin-bottom: 15px;
+}
+.item-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 8px;
+    margin-top: 10px;
+}
+.content{
+    display: flex;
+    align-items: center;
+}
+.action{
+    display: flex;
+    gap: 10px;
+}
+.item-title{
+    margin-left: 10px;
+}
+.todo-list{
+    margin-top: 40px;
+}
+.footer{
+    margin-top: 20px;
+    text-align: left;
+}
+.item-title.done {
+    color: #9a9a9a;
+    text-decoration: line-through;
+}
+.alert{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.alert-footer{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
