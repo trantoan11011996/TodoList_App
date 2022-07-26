@@ -1,12 +1,12 @@
 import { Alert } from "bootstrap";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, Row,Col } from "react-bootstrap";
-import { updateTodoList } from "./TodoData";
+import { AuthContext, updateTodoList } from "./TodoData";
 
 
 export default function FormInput({todoName, setTodoName,todoList,setTodoList,status,setStatus}) {
     const [alert,setAlert] = useState(false)
-
+    const auth  = useContext(AuthContext)
     const handleChange = (e)=>{
         setTodoName(e.target.value)
     }   
@@ -23,8 +23,9 @@ export default function FormInput({todoName, setTodoName,todoList,setTodoList,st
         }
         setTodoName('')
         const newTodoList = ([...todoList,newTodo])
-        setTodoList(newTodoList)
-        updateTodoList(newTodoList)
+        localStorage.setItem('todos',JSON.stringify(newTodoList))
+        auth.setTodoList(newTodoList)
+       
     }
     
     const handleFilter = (e)=>{

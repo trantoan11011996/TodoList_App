@@ -5,7 +5,7 @@ import "../Todo-css/style.css"
 import { updateTodoList } from "./TodoData";
 import TodoList from "./TodoList";
 
-export default function TodoItem({ todoList, setTodoList, item, title, id, deleteTodo,setNewTitle,handleNewTitle }) {
+export default function TodoItem({ todoList, setTodoList, item, title, id, deleteTodo,setNewTitle,handleNewTitle,index }) {
     const [eidtBox, setEditBox] = useState(false)
     
     const switchToDone = (e) => {

@@ -1,5 +1,7 @@
+import React from "react"
 
 export function GenerateData(){
+    console.log('data')
     const initData = [
         {   
             id : 1,
@@ -27,10 +29,11 @@ export function GenerateData(){
     }
 }
 
+export function updateTodoList(newTodoList){
+    localStorage.setItem('todos',JSON.stringify(newTodoList))
+}
 export function getTodo(){
     let json = localStorage.getItem('todos')
     return !json ? [] : JSON.parse(json)
 }
-export function updateTodoList(newTodoList){
-    localStorage.setItem('todos',JSON.stringify(newTodoList))
-}
+export const AuthContext = React.createContext(null)

@@ -15,7 +15,8 @@ export default function TodoList({todoList,setTodoList,filterTodo,deleteTodo,set
                     id = {todo.id} item={todo} 
                     deleteTodo = {deleteTodo} 
                     setNewTitle = {setNewTitle}
-                    handleNewTitle={handleNewTitle}/>
+                    handleNewTitle={handleNewTitle}
+                    index={index}/>
                 )
             })}
         </div>
